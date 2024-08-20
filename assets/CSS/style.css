@@ -18,6 +18,30 @@
     --color-g: #BCBBBD;
 }
 
+.en-tete
+{
+    
+    border: 4px solid rgba(188, 187, 189, 0.2);
+    margin: 0 70px;
+   
+
+}
+.main
+{
+    border: 4px solid rgba(188, 187, 189, 0.2);
+    border-top:none ;
+    border-bottom: none;
+    margin: 0 70px;
+    
+}
+.footer
+{
+    border: 4px solid rgba(188, 187, 189, 0.2);
+    border-top: none;
+      
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -42,13 +66,15 @@ body{
     background-color: black;
     color: white;
     font-family: 'Space Grotesk';
-    font-weight: 300;
-    background-image: url(../Illustrations/Bathome12.png);
+    font-weight: 300; 
+    background-image: url(../Illustrations/Bathome1.png);
     background-repeat: no-repeat;
-    background-size: 35%;
-    background-position: 887px 2850px;
-  
+    background-size: contain; 
+    /* padding: 0 70px; */
 }
+
+
+
 
 .up-bar{
     border-top: #BCBBBD 1px solid;
@@ -90,6 +116,12 @@ nav{
 
 ul{
     list-style: none;
+    display: flex;
+    justify-content: space-between; 
+}
+ul li
+{
+    margin-right: 20px;
 }
 
 nav ul a{
@@ -97,7 +129,8 @@ nav ul a{
     font-size: 25px;
     font-weight: 600;
     font-family: 'rajdhani';
-    /*text-decoration: none; */
+    text-decoration: none; 
+    
 }
 .logo:hover{
     -webkit-filter:invert(4%) sepia(100%) saturate(1498%) hue-rotate(355deg) brightness(109%) contrast(103%) ;
@@ -123,12 +156,12 @@ nav ul a:hover{
 /*Design de la partie en tête Hero */
 
 #hero{
-    background-image: url(../Illustrations/Bathome1.png);
-    height: 850px;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-color: black;
-    background-size: cover;
+    /* background-image: url(../Illustrations/Bathome1.png); */
+    /* height: 850px; */
+    /* background-position: top center; */
+    /* background-repeat: no-repeat; */
+    /* background-color: black; */
+    /* background-size: cover; */
 }
 
 .content{
@@ -183,12 +216,15 @@ nav ul a:hover{
     position: fixed;
     right: 20px;
     top: 200px;
+    
+    
 
 }
 
 .scroll .social{
     margin-top: 30px;
     cursor: pointer;
+    
 
 }
 
@@ -238,6 +274,13 @@ nav ul a:hover{
 
 #Némésis{
     margin-top: 70px;
+    
+}
+.img-boomerang
+{
+    position: absolute;
+    left:1000px;
+    top:2700px;
 }
 
 .némésis-personnage{
@@ -635,3 +678,45 @@ footer .social-footer{
 footer .social-item{
     padding: 15px;
 }
+
+
+
+
+@keyframes scaleUp {
+    0% {
+      transform: scale(0.1); /* L'image commence à 10% de sa taille initiale */
+      opacity: 0; /* L'image est invisible au début */
+    }
+    100% {
+      transform: scale(1); /* L'image atteint sa taille normale */
+      opacity: 1; /* L'image devient complètement visible */
+    }
+  }
+  
+  /* Application de l'animation à l'image */
+  .scale-up-animation {
+    animation: scaleUp 2s ease-out;
+    /* La durée de l'animation est de 2 secondes */
+    /* Le easing "ease-out" rend l'animation plus douce à la fin */
+  }
+
+
+
+  /* Définition de l'animation */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-90%);
+      opacity: 0.5; /* Le texte est invisible au début */
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1; /* Le texte devient complètement visible */
+    }
+  }
+  
+  /* Application de l'animation au texte */
+  .slide-in-left {
+    animation: slideInFromLeft 3s ease-out;
+    /* La durée de l'animation est de 1.5 seconde */
+    /* Le easing "ease-out" rend l'animation plus douce à la fin */
+  }       
